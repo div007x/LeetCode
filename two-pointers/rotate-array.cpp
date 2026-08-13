@@ -13,7 +13,10 @@ void rotate(int start, int end, vector<int>& nums){
     void rotate(vector<int>& nums, int k) {
 
         int n= nums.size();
+
+        if( k>n){
         k = k%n;
+        }
 
         rotate(0, n-k-1, nums);
         rotate(n-k,n-1,nums);
